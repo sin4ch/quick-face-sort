@@ -1,4 +1,4 @@
-# quick-face-sort
+# quick-face-sort (wip)
 this project will sort through a folder and sort pictures & video into subfolders based on training with choice faces. this is great for sorting pictures and videos through very large folders without having to doing it manually.
 
 # back story
