@@ -9,7 +9,6 @@ However, I realise that some of those pictures are important i.e they could have
 I'm creating this as a way to automate this process. There are probably many tools that can do this. However, I want to build something like this from scratch.
 
 # Plan
----
 - a cloud based version, where I'll have to upload the directory to a cloud platform like S3 then the bucket is scanned using a service like rekognition
   - Maybe this will have a web-based UI where people can upload their pictures and it creates an isolated bucket (for security purposes) for them and starts a CI/CD pipeline
 - a local version,
