@@ -9,10 +9,17 @@ however, I realise that some of those pictures are important i.e they could have
 i'm creating this as a way to automate this process. there are probably many tools that can do this. however, I want to build something like this from scratch.
 
 # plan
-- a cloud based version, where I'll have to upload the directory to a cloud platform like S3 then the bucket is scanned using a service like rekognition
-  - Maybe this will have a web-based UI where people can upload their pictures and it creates an isolated bucket (for security purposes) for them and starts a CI/CD pipeline
-    ![http://url/to/img.png](https://github.com/sin4ch/quick-face-sort/blob/main/quick-face-sort-cloud.png)
-- a local version,
-  - that probably can be installed in the command line (this'll be easier than a desktop frontend. Maybe you can work with Electron)
-    ![http://url/to/img.png](https://github.com/sin4ch/quick-face-sort/blob/main/quick-face-sort-local.png)
-- I could work on an API so others can use it in their applications
+## cloud version  
+[- a cloud based version, where I'll have to upload the directory to a cloud platform like S3 then the bucket is scanned using a service like rekognition]: # 
+  [- Maybe this will have a web-based UI where people can upload their pictures and it creates an isolated bucket (for security purposes) for them and starts a CI/CD pipeline]: # 
+
+   ![http://url/to/img.png](https://github.com/sin4ch/quick-face-sort/blob/main/quick-face-sort-cloud.png)
+   
+## local version  
+[- a local version,]: # 
+  [- that probably can be installed in the command line (this'll be easier than a desktop frontend. Maybe you can work with Electron)
+
+  ![http://url/to/img.png](https://github.com/sin4ch/quick-face-sort/blob/main/quick-face-sort-local.png)
+
+## API version
+[I could work on an API so others can use it in their applications]: #
