@@ -2,7 +2,6 @@
 This project will sort through a folder and sort pictures & video into subfolders based on training with choice faces. This is great for sorting pictures and videos through very large folders without having to doing it manually.
 
 # Back Story
----
 I was trying to clear space on my phone. Notoriously, WhatsApp usually has a large portion of the filesystem due to unwanted videos, pictures, media in general, that we end up downloading and not exactly needing later. 
 
 However, I realise that some of those pictures are important i.e they could have been pictures of family, friends etc that I really want to keep. So i can just delete the entire WhatsApp media folder. But, sometimes, these folders can be so large that it can be a chore to go through the entire folder and check for the media you want to keep.
