@@ -25,3 +25,6 @@ terraform.rc
 
 # Exclude provider binary executable files
 *.exe
+
+# Lambda deployment package
+lambda_function.zip
