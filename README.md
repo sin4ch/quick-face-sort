@@ -34,12 +34,12 @@ Quick Face Sort automates this process using AWS Rekognition to identify and org
    pip install -r requirements.txt
    ```
 3. **Deploy infrastructure with Terraform**
-  ```bash
-  cd terraform
-  terraform init
-  terraform plan
-  terraform apply
-  ```
+   ```bash
+   cd terraform
+   terraform init
+   terraform plan
+   terraform apply
+   ```
 4. **Upload reference images**
   - Upload photos of people you want to identify to the reference S3 bucket
   - Each person should have at least one clear facial image
