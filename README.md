@@ -1,27 +1,65 @@
-# quick-face-sort (wip)
-Scan through folders with large amounts of files and sorts out media with people (or items) you want. 
-# back story
+# Quick Face Sort
 
- ![](https://github.com/sin4ch/quick-face-sort/blob/main/images/automate-instead.jpg)
+An automated solution to sort images based on facial recognition. This tool scans through folders with large amounts of files and organizes media containing specific people you want to keep.
 
-I was trying to clear space on my phone. Notoriously, WhatsApp usually has a large portion of the filesystem due to unwanted videos, pictures, media in general, that we end up downloading and not exactly needing later. 
+![](https://github.com/sin4ch/quick-face-sort/blob/main/images/automate-instead.jpg)
 
-However, I realise that some of those pictures are important i.e they could have been pictures of family, friends etc that I really want to keep. so I can just delete the entire WhatsApp media folder. but, sometimes, these folders can be so large that it can be a chore to go through the entire folder and check for the media you want to keep.
+## Motivation
 
-I'm creating this as a way to automate this process. There are probably many tools that can do this. however, I want to build something like this from scratch.
+WhatsApp and other messaging apps often consume large portions of phone storage with unwanted media that we download but don't need long-term. However, some images contain important people (family, friends) that we want to keep. Manually sorting through hundreds or thousands of images is tedious.
 
-# plan
-## cloud version  
-[- a cloud based version, where I'll have to upload the directory to a cloud platform like S3 then the bucket is scanned using a service like rekognition]: # 
-  [- Maybe this will have a web-based UI where people can upload their pictures and it creates an isolated bucket (for security purposes) for them and starts a CI/CD pipeline]: # 
+Quick Face Sort automates this process using AWS Rekognition to identify and organize images based on faces.
 
-   ![](https://github.com/sin4ch/quick-face-sort/blob/main/images/quick-face-sort-cloud.png)
-   
-## local version  
-[- a local version,]: # 
-  [- that probably can be installed in the command line (this'll be easier than a desktop frontend. Maybe you can work with Electron)
+## Architecture
 
-  ![](https://github.com/sin4ch/quick-face-sort/blob/main/images/quick-face-sort-local.png)
+![](https://github.com/sin4ch/quick-face-sort/blob/main/images/quick-face-sort-cloud.png)
 
-## API version
-[I could work on an API so others can use it in their applications]: #
+## Setup Requirements
+
+### Prerequisites
+- AWS Account
+- Terraform installed
+- Python 3.9+
+- Boto3 library
+
+### Installation Steps
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sin4ch/quick-face-sort.git
+   cd quick-face-sort
+   ```
+2. **Install dependencies**
+   ```bash
+  pip install -r requirements.txt
+   ```
+3. **Deploy infrastructure with Terraform**
+   ```bash
+  cd terraform
+  terraform init
+  terraform plan
+  terraform apply
+   ```
+4. **Upload reference images**
+  - Upload photos of people you want to identify to the reference S3 bucket
+  - Each person should have at least one clear facial image
+5. **Upload images to sort**
+- Upload images to the database S3 bucket
+- The Lambda function will automatically process these images
+6. **View Results**
+- Images will be organized into folders named after the reference images
+- Check CloudWatch logs for processing details
+
+## How It Works
+
+- Reference photos are stored in a dedicated S3 bucket
+- New photos uploaded to the database bucket trigger a Lambda function
+- The Lambda function uses AWS Rekognition to compare faces
+- Images with matching faces are organized into folders
+- Logs are stored in CloudWatch for monitoring
+
+## Future Plans
+
+- **Local Version**: A local command-line version may be developed to process images (and videos) directly on your computer.
+
+- **API Version**: An API version may be developed to allow integration with other application
