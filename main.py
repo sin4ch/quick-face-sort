@@ -1,4 +1,4 @@
-from boto3 import *
+from boto3 import client
 import json
 import os
 import logging
