@@ -16,6 +16,7 @@ Quick Face Sort automates this process using AWS Rekognition to identify and org
 
 ## Project Structure
 
+```bash
 quick-face-sort/
 ├── README.md
 ├── main.py
@@ -31,7 +32,7 @@ quick-face-sort/
     ├── main.tf
     ├── output.tf
     └── .terraform.lock.hcl
-
+```
 
 ## Setup Requirements
 
