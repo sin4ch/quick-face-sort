@@ -12,7 +12,7 @@ Quick Face Sort automates this process using AWS Rekognition to identify and org
 
 ## Architecture
 
-![](https://github.com/sin4ch/quick-face-sort/blob/main/images/quick-face-sort-cloud.png)
+![](https://github.com/sin4ch/quick-face-sort/blob/main/images/diagram-export-4-5-2025-11_12_25-PM.png)
 
 ## Project Structure
 
