@@ -2,13 +2,15 @@
 
 An automated solution to sort images based on facial recognition. This tool scans through folders with large amounts of files and organizes media containing specific people you want to keep.
 
-![](https://github.com/sin4ch/quick-face-sort/blob/main/images/automate-instead.jpg)
-
 ## Motivation
 
 WhatsApp and other messaging apps often consume large portions of phone storage with unwanted media that we download but don't need long-term. However, some images contain important people (family, friends) that we want to keep. Manually sorting through hundreds or thousands of images is tedious.
 
 Quick Face Sort automates this process using AWS Rekognition to identify and organize images based on faces.
+
+Read this <a href="https://community.aws/content/2vKa6yJl5rVJvIoS6nxxvYydiWF/serverless-image-organizer-with-rekognition-terraform" target="blank">article</a> for more info
+
+![](https://github.com/sin4ch/quick-face-sort/blob/main/images/automate-instead.jpg)
 
 ## Architecture
 
